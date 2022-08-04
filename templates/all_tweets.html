@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style type="text/css">
+        .tweetsss{
+            border: 5px solid black;
+            margin: 10;
+        }
+        body{
+            background-color: #00b386;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="original-load"></div>
+        </div>
+    </div>
+
+    <h1> all posts: </h1>
+    {%for tweet in all_tweets2%}
+        <div class="tweetsss">
+            <h2>year in meet: </h2>
+            <h3>{{tweet['year']}}</h3>
+            <h2> journey in meet: </h2>
+            <div style="width: 50px">
+            <h3>{{tweet['journey']}}</h3>
+        	</div>
+            <h2> if there is a project here will be a link:</h2>
+            <a>{{tweet['project']}}</a>
+            <h6>{{tweet['time']}}</h6>
+        </div>
+        </a> 
+    {% endfor %}
+    <a href="/add_tweet"><button>add a post</button></a>
+    <a href="/home"><button>home</button></a>
+
+</body>
+
+</html>
